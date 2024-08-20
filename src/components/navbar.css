@@ -1,0 +1,151 @@
+.facebook {
+  color: #4a7ff0;
+}
+.insta {
+  color: #e4405f;
+}
+.youtube {
+  color: #c4302b;
+}
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 200px;
+  gap: 20px;
+}
+.para {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+}
+.hading {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.main-div {
+  width: 100%;
+  height: 8rem;
+  /* background-color: #dc4747;	 */
+  display: grid;
+  grid-template-columns: 10rem 1fr 2fr 1fr 10rem;
+  -webkit-box-shadow: -1px 17px 15px 7px rgba(0, 0, 0, 0.51);
+  -moz-box-shadow: -1px 17px 15px 7px rgba(0, 0, 0, 0.51);
+  box-shadow: -1px 17px 15px 7px rgba(0, 0, 0, 0.51);
+}
+.hamb-menu {
+  display: none;
+  font-size: 30px;
+  color: black;
+}
+.menu-link mobile {
+  display: none;
+}
+.logo {
+  grid-column: 2/3;
+  justify-content: start;
+  display: flex;
+  align-items: center;
+}
+.menu-link {
+  grid: 3/4;
+}
+.menu-link ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  align-items: center;
+  height: 9rem;
+  text-decoration: none;
+}
+.menu-link ul li {
+  margin: 0 1rem;
+  text-transform: uppercase;
+}
+.menu-link ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.social-media {
+  grid-column: 4/5;
+}
+.social-media ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  align-items: center;
+  height: 9rem;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1043px) {
+  .main-div {
+    grid-template-columns: 2rem 1fr 2fr 1fr 2rem;
+  }
+}
+@media screen and (max-width: 848px) {
+   .main-div {
+      grid-template-columns: 1rem 1fr 2fr 1fr 1rem;
+   }
+   .menu-link {
+      display: none;
+   }
+   .hamb-menu {
+      display: block;
+      grid-column: 3/4;
+      justify-content: end;
+      display: flex;
+      align-items: center;
+   }
+   .social{
+      display: none;
+   }
+   .social-media{
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+   }
+   .mobile-menu-link{
+      display: block;
+      color: #333;
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-decoration: none;
+
+   }
+.menu-link {
+  display: none;
+}
+
+.menu-link.show {
+  display: block;
+}
+
+@media screen and (max-width: 848px) {
+  .menu-link.show {
+    display: block;
+    background-color: white;
+    position: absolute;
+    top: 8rem;
+    right: 50%;
+    transform: translateX(50%);
+    width: 100%;
+    z-index: 100;
+  }
+  .menu-link.show ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  .hero-section{
+    margin-top: 50%;
+  }
+}
+}
